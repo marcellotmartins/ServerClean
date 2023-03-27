@@ -1,0 +1,382 @@
+@font-face {
+    font-family: "Eurofighter";
+    src: url("fonts/eurofighter.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Century Gothic";
+    src: url("fonts/GOTHIC.TTF") format("truetype");
+}
+
+body {
+    user-select: none;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    transform: translate3d(0);
+}
+.esc {
+	width: 100%;
+	height: 100%;
+}
+
+.logo {
+    position: fixed;
+	top: 100px;
+	right: 70vh;
+	width: 200px;
+	height: 200px;
+	opacity: 1.2;
+	-webkit-animation: pulseBounce 2.5s infinite;
+    animation: pulseBounce 2.5s infinite;
+}
+
+@keyframes pulseBounce {
+    0% {
+        margin-top: 0;
+        transform: translate(-55%, -50%) scale(1);
+    }
+    25% {
+        transform: translate(-55%, -50%) scale(1.05);
+    }
+    50% {
+        transform: translate(-55%, -50%) scale(1);
+    }
+    75% {
+        transform: translate(-55%, -50%) scale(1.05);
+    }
+    100% {
+        transform: translate(-55%, -50%) scale(1);
+    }
+}
+
+.logo img {
+    width: 80%;
+}
+
+.container {
+    position: absolute;
+    width: 5vh;
+    height: 25vh;
+    bottom: 3%; right: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+
+    /* display: none; */
+}
+
+.container-map {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 7vh;
+    bottom: 1%; left: 35vh;
+    opacity: .7;
+
+    display: none;
+}
+
+.border-circle {
+    position: relative;
+    width: 5.5vh;
+    height: 5.5vh;
+    margin: auto;
+    border-radius: 50%;
+    background: #474747;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.border-circle-map {
+    position: relative;
+    width: 4vh;
+    height: 4vh;
+    margin: auto;
+    border-radius: 50%;
+    background: #474747;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.back-circle {
+    position: relative;
+    width: 5vh;
+    height: 5vh;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.back-circle-map {
+    position: relative;
+    width: 3.5vh;
+    height: 3.5vh;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-minor {
+    width: 6vh;
+    height: 6vh;
+
+}
+
+.circle-progress {
+    position: relative;
+    width: 4.5vh;
+    height: 4.5vh;
+    margin: auto;
+    border-radius: 50%;
+    color: white;
+    font-size: 3vh;
+}
+
+
+.circle-progress img {
+    position: absolute;
+    width: 90%;
+    height: 60%;
+    left: 0; top: 0; right: 0; bottom: 0;
+    margin: auto;
+}
+.circle-progress i {
+    position: absolute;
+    width: 100%;
+    left: 0; top: 0; right: 0; bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2vh;
+    
+}
+
+
+
+
+
+
+
+
+.circle-progress-map {
+    position: relative;
+    width: 3vh;
+    height: 3vh;
+    margin: auto;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5vh;
+}
+
+.circle-progress-map img {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    left: 0; top: 0; right: 0; bottom: 0;
+    margin: auto;
+}
+.circle-progress-map i {
+    position: absolute;
+    width: 100%;
+    left: 0; top: 0; right: 0; bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2vh;
+    
+}
+
+.circle-progress-map svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0; top: 0; right: 0; bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+.speedometer-container {
+    position: absolute;
+    right: 2%; bottom: 3%;
+    width: 23vh;
+    height: 23vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: .85;
+    display: none;
+}
+
+
+
+.speedometer-circle {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: 21.5vh;
+    height: 21.5vh;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: -3;
+}
+
+.speedometer-circle canvas {
+    z-index: 9999;
+}
+
+.fuel-circle {
+    position: relative;
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+}
+
+.fixed-fuel {
+    position: absolute;
+    background: transparent;
+    bottom: -.9vh; right: 3.3vh;
+    width: 6vh;
+    height: 6vh;
+
+}
+
+.fixed-engine {
+    position: absolute;
+    background: transparent;
+    bottom: 4.4vh; right: -.9vh;
+    width: 6vh;
+    height: 6vh;
+}
+
+
+.fuel {
+    width: 5vh;
+    height: 5vh;
+}
+
+.fuel i {
+    position: absolute;
+    left: 0; right: 0; bottom: 0; top: 0;
+    margin: auto;
+    color: white;
+    font-size: 2.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fuel img {
+    width: 100%;
+    height: 85%;
+}
+
+.engine  {
+    position: absolute;
+    left: 0; right: 0; bottom: 0; top: 0;
+    margin: auto;
+}
+
+.engine img {
+    width: 100%;
+    height: 100%;
+}
+
+.speed-container {
+    position: absolute;
+    left: 0; bottom: 0; top: 0; right: 0;
+    margin: auto;
+    width: 90%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5.5vh;
+    flex-direction: column;
+    color: white;
+    font-family: "Eurofighter";
+}
+
+.speed-container p {
+    margin: 0;
+}
+
+.speed-unit {
+    font-size: 1.1vh;
+}
+
+.seatbelt{
+    position: absolute;
+    bottom: 1vh; left: 0; right: 0;
+    margin: auto;
+    width: 4vh;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seatbelt img {
+    height: 75%;
+}
+
+.locked img {
+    height: 75%;
+}
+
+
+.other-infos {
+    position: absolute;
+    bottom: .5%; left: 1%;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5vh;
+    font-family: "Century Gothic";
+    color: rgb(196, 195, 195);
+}
+
+
+
+
+.mic {
+    color: rgb(9, 255, 0);
+    transition: color .2s;
+}
+
+.talking {
+    color: rgb(255, 0, 0);
+}

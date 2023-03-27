@@ -1,0 +1,201 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+}
+
+
+body{
+    background-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.menuContainerSkinShop{
+    width: 700px;
+    height:550px;
+    background: rgba(22, 22, 22, 0.6);
+    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+    --aug-border-bg:linear-gradient(24.73deg, #FF0000 47.24%, rgba(208, 99, 99, 0) 100%);
+    --aug-border-all: 2px;
+}
+
+.menuContainerSkinShop h2{
+    width:100%;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+#esquerdoSkinShop{
+    left: 10px;
+}
+
+.listagem{
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+}
+
+.item{
+    width: 680px;
+    height: 110px;
+    background: #00000080;
+    margin: auto;
+    margin-top: 12px;
+    --aug-border-all: 2px;
+    --aug-border-bg: linear-gradient(54.76deg, #ff0000 5.23%, #ff0000 5.24%, rgba(233, 53, 79, 0) 127.36%);
+}
+
+
+.titleTop{
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+
+.principal{
+    width: 130px;
+    height: 90px;
+    float: left;
+    color: #fff;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.principalAfter{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, #ff000000, red, #ff000000);
+    position: relative;
+    bottom: 20px;
+    left: 5px;
+}
+
+.namePrincipal{
+    width: 100%;
+    height: 20px;
+}
+
+.fotoPrincipal{
+    width: 70px;
+    background-size: 100%;
+    background-position: center;
+    height: 70px;
+}
+.secundario{
+    width: 380px;
+    height: 90px;
+    float: left;
+    color: #fff;
+    text-align: center;
+    margin: 10px;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.itemSecundario{
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-left: 5px;
+    --aug-border-all: 2px;
+    --aug-border-bg: linear-gradient(80.56deg, rgba(0, 0, 0, 0) 3%, #E9C135 97.12%); 
+    background: #1A1A1A80;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.iniciar{
+    width: 118px;
+    height: 90px;
+    float: right;
+    color: #fff;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+
+}
+
+.iniciarBefore{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, #ff000000, red, #ff000000);
+    position: relative;
+    left: -15px;
+}
+
+.iniciar:hover{
+    font-size: 17px;
+}
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.paiSecundario{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.nameSecundario{
+    width: 100px;
+    min-height: 25px;
+    padding: 2px;
+    z-index: 9999999999;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 11px;
+    background: #1a1a1a;
+    position: absolute;
+    top: 5px;
+    visibility: hidden;
+    border-radius: 10px;
+
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.paiSecundario{
+    width: 75px;
+    height: 75px;
+}
+
+.paiSecundario:hover .nameSecundario{
+    visibility: visible;
+}

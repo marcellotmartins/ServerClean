@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nation HUD</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+   <script src="circle-progress.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <div class="logo">
+      <img src="img/Logo.png" alt="">
+   </div>
+
+   <div class="container">
+      <div class="border-circle">
+         <div class="back-circle">
+            <div class="circle-progress life">
+               <i class="fas fa-heart"></i>
+            </div>
+         </div>
+      </div>
+      <div class="border-circle">
+         <div class="back-circle">
+            <div class="circle-progress armour">
+               <img src="img/shield.svg" alt="">
+            </div>
+         </div>
+      </div>
+      <div class="border-circle">
+         <div class="back-circle">
+            <div class="circle-progress hunger">
+               <i class="fas fa-hamburger"></i>
+            </div>
+         </div>
+      </div>
+      <div class="border-circle">
+         <div class="back-circle">
+            <div class="circle-progress thirst">
+               <img src="img/juice.svg" alt="">
+            </div>
+         </div>
+      </div>
+      <div class="border-circle">
+         <div class="back-circle">
+            <div class="circle-progress mic">
+               <i class="fas fa-microphone"></i>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container-map">
+      <div class="border-circle-map">
+         <div class="back-circle-map">
+            <div class="circle-progress-map life">
+               <i class="fas fa-heart"></i>
+            </div>
+         </div>
+      </div>
+      <div class="border-circle-map">
+         <div class="back-circle-map">
+            <div class="circle-progress-map armour">
+               <img src="img/shield.svg" alt="">
+            </div>
+         </div>
+      </div>
+      <div class="border-circle-map">
+         <div class="back-circle-map">
+            <div class="circle-progress-map hunger">
+               <i class="fas fa-hamburger"></i>
+            </div>
+         </div>
+      </div>
+      <div class="border-circle-map">
+         <div class="back-circle-map">
+            <div class="circle-progress-map thirst">
+               <img src="img/juice.svg" alt="">
+            </div>
+         </div>
+      </div>
+      <div class="border-circle-map">
+         <div class="back-circle-map">
+            <div class="circle-progress-map mic">
+               <i class="fas fa-microphone"></i>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="speedometer-container">
+      <div class="speedometer-circle">
+         <div class="fuel-circle">
+            <div class="speed-container"><p class="speed">210</p><p class="speed-unit">KM/H</p></div>
+            <div class="seatbelt">
+               <img id="seatbelt" src="img/seat-belt-unlocked.svg" alt="">
+            </div>
+         </div>
+         <div class="border-circle fixed-fuel">
+            <div class="back-circle back-minor">
+               <div class="circle-progress fuel">
+                  <img src="img/Gasolina.svg" alt="">
+               </div>
+            </div>
+         </div>
+         <div class="border-circle fixed-engine">
+            <div class="back-circle back-minor">
+               <div class="circle-progress fuel engine">
+                  <img src="img/Motor.svg" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="other-infos">
+      <span class="time">19:30</span> - <span class="street">Vespucci Beach</span>
+   </div>
+   <script src="script.js"></script>
+   <script>
+      $('.circle-progress').circleProgress({
+         value: 1.0,
+         size: $(window).height() * 0.045,
+         fill: {gradient: ['#F7276D', '#CD08C8']},  
+         startAngle: Math.PI * 2,
+         emptyFill: '#525252',
+         lineCap: "round",
+         thickness: $(window).height() * 0.003,
+      });
+      $('.circle-progress-map').circleProgress({
+         value: 1.0,
+         size: $(window).height() * 0.03,
+         fill: {gradient: ['#F7276D', '#CD08C8']},
+         startAngle: Math.PI * 2,
+         emptyFill: '#525252',
+         lineCap: "round",
+      });
+      $('.speedometer-container').circleProgress({
+         value: 1.0,
+         size: $(window).height() * 0.23,
+         fill: {gradient: ['#BB01EF', '#EC2084']},
+         startAngle: Math.PI / 2.37,
+         emptyFill: '#525252',
+         lineCap: "round",
+         thickness: $(window).height() * 0.011,
+         speedometer: true
+      });
+      $('.fuel-circle').circleProgress({
+         value: 1.0,
+         size: $(window).height() * 0.17,
+         fill: "#fff",
+         startAngle: Math.PI / 2.2,
+         endAngle: Math.PI * 2.05,
+         emptyFill: '#525252',
+         lineCap: "butt",
+         fuel: true,
+         thickness: $(window).height() * 0.002,
+         reverse: true
+      });
+      $(".life").circleProgress({
+         fill: {gradient: ['#F7276D', '#CD08C8']},  // Cor da vida
+      });
+      $(".armour").circleProgress({
+         fill: {gradient: ['#0000cc', '#3333ff']},  // Cor do colete
+      });
+      $(".hunger").circleProgress({
+         fill: {gradient: ['#E3CB00', '#F69B00']}, // Cor da fome
+      });
+      $(".thirst").circleProgress({
+         fill: {gradient: ['#00C0F5', '#00E1E2']}, // Cor da sede
+      });
+      $(".mic").circleProgress({
+         fill: {gradient: ['#F4F4F4', '#959595']}, // Cor do mic
+      });
+      $(".fuel").circleProgress({
+         fill: '#DA15AB',                          // Cor da gasosa
+         animation: false,
+         size: $(window).height() * 0.05,
+         thickness: $(window).height() * 0.005,
+      });
+      $(".engine").circleProgress({                // Cor motor
+         fill: "#fff",
+         animation: false,
+         thickness: $(window).height() * 0.005,
+      });
+      $(window).resize(() => {
+         $('.circle-progress').circleProgress({
+            size: $(window).height() * 0.045,
+            thickness: $(window).height() * 0.003,
+         });
+         $('.circle-progress-map').circleProgress({
+            size: $(window).height() * 0.03,
+         });
+         $('.speedometer-container').circleProgress({
+            size: $(window).height() * 0.23,
+         });
+         $('.fuel-circle').circleProgress({
+            size: $(window).height() * 0.17,
+            thickness: $(window).height() * 0.002,
+         });
+         $(".fuel").circleProgress({
+            thickness: $(window).height() * 0.005,
+            size: $(window).height() * 0.05,
+         });
+      })
+   </script>
+</body>
+</html>

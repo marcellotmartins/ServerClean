@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nyo_guardaroupas/style.css">
+</head>
+<body>
+    <div id="actionmenuGuardaRoupa" style="display: none;">
+        <div id="cameraGuardaRoupa">
+            <div class="divCameraGuardaRoupa" data-augmented-ui="border bl-clip tr-clip" onClick="shopChangeCam('all')"><i class="icon-corpo"></i></div>
+            <div class="divCameraGuardaRoupa" data-augmented-ui="border bl-clip tr-clip" onClick="shopChangeCam('head')"><i class="icon-rosto"></i></div>
+            <div class="divCameraGuardaRoupa" data-augmented-ui="border bl-clip tr-clip" onClick="shopChangeCam('torso')"><i class="icon-torso"></i></div>
+            <div class="divCameraGuardaRoupa" data-augmented-ui="border bl-clip tr-clip" onClick="shopChangeCam('shoes')"><i class="icon-perna"></i></div>
+            <div class="divCameraGuardaRoupa" data-augmented-ui="border bl-clip tr-clip" onClick="shopChangeCam('foot')"><i class="icon-pes"></i></div>
+        </div>
+        <div id="rotacaoGuardaRoupa">
+                <h1>ROTAÇÃO</h1>
+                <div id="slideGuardaRoupa"  data-augmented-ui="border bl-clip tr-clip">
+                    <input class="slideCriacaoGuardaRoupa" type="range" oninput="onRangeChange('shopRotacionar',this.value)"value="0" min="0" max="360">
+            </div>
+        </div>
+    
+        <div class="menuContainerGuardaRoupa" data-augmented-ui="border bl-clip" id="esquerdoGuardaRoupa">
+            <div class="menuInternGuardaRoupa">
+                <div class="menuInternGuardaRoupaAfter"></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaE selecionadoGuardaRoupa" onclick="selectGuardaPart(this)" data-idpart="mascara" data-idmenu ="E" data-titulo="Mascara"><i class="icon-mascara"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaE" onclick="selectGuardaPart(this)" data-idpart="bone" data-idmenu ="E" data-titulo="Chapeu"><i class="icon-chapeu"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaE" onclick="selectGuardaPart(this)" data-idpart="camisa" data-idmenu ="E" data-titulo="Camisa"><i class="icon-camisa"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaE" onclick="selectGuardaPart(this)" data-idpart="jaqueta" data-idmenu ="E" data-titulo="Jaqueta"><i class="icon-jaqueta"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaE" onclick="selectGuardaPart(this)" data-idpart="calca" data-idmenu ="E" data-titulo="Calça"><i class="icon-calca"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaE" onclick="selectGuardaPart(this)" data-idpart="sapato" data-idmenu ="E" data-titulo="Sapato"><i class="icon-sapato"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaE" onclick="selectGuardaPart(this)" data-idpart="mochila" data-idmenu ="E" data-titulo="Mochila"><i class="icon-mochila"></i></div>
+            </div>
+            <h2 id="GuardaRoupaTituloEsquerdo">Mascara</h2>
+            <div class="listagemGuardaRoupa listagemGuardaRoupaEsquerda">
+               
+            </div>
+        </div>
+        <div class="corContainerGuardaRoupa" data-augmented-ui="border br-clip" id="corEsquerdoGuardaRoupa">
+            <div id="listagemCorGuardaRoupa" class="listaCorGuardaRoupaE">               
+                
+            </div>   
+            
+        </div>
+    
+        <div class="inputDivGuardaRoupa"  id="pesquisaEsquerdaGuardaRoupa"  data-augmented-ui="border bl-clip tr-clip">    
+            <input class="inputPesquisaGuardaRoupa" type="text" placeholder="Pesquisar" id="searchGuardaRoupaE" onkeyup="searchGuardaRoupa('E')">
+        </div>
+        <div class="menuContainerGuardaRoupa" data-augmented-ui="border br-clip" id="direitoGuardaRoupa">
+            <div class="menuInternGuardaRoupa">
+                <div class="menuInternGuardaRoupaAfter"></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaD selecionadoGuardaRoupa" onclick="selectGuardaPart(this)" data-idpart="oculos" data-idmenu ="D" data-titulo="Oculos"><i class="icon-oculos"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaD" onclick="selectGuardaPart(this)" data-idpart="brinco" data-idmenu ="D" data-titulo="Brinco"><i class="icon-brincos"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaD" onclick="selectGuardaPart(this)" data-idpart="relogio" data-idmenu ="D" data-titulo="Relogio"><i class="icon-relogio"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaD" onclick="selectGuardaPart(this)" data-idpart="gravata" data-idmenu ="D" data-titulo="Gravata/Acessorio"><i class="icon-gravata"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaD" onclick="selectGuardaPart(this)" data-idpart="colete" data-idmenu ="D" data-titulo="Colete"><i class="icon-colete"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaD" onclick="selectGuardaPart(this)" data-idpart="mao" data-idmenu ="D" data-titulo="Maos"><i class="icon-maos"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaD" onclick="selectGuardaPart(this)" data-idpart="bracelete" data-idmenu ="D" data-titulo="Pulseira"><i class="icon-pulseira"></i></div>
+                <div class="botaoMenuGuardaRoupa menuGuardaRoupaD" onclick="selectGuardaPart(this)" data-idpart="outfit" data-idmenu ="D" data-titulo="Outfit"><i class="icon-pulseira"></i></div>
+            
+            </div>
+            <h2 id="GuardaRoupaTituloDireito">Oculos</h2>
+            <div class="listagemGuardaRoupa listagemGuardaRoupaDireita">           
+            </div>
+        </div>
+    
+        <div class="inputDivGuardaRoupa" id="pesquisaDireitaGuardaRoupa" data-augmented-ui="border bl-clip tr-clip">
+            <input class="inputPesquisaGuardaRoupa" type="text" placeholder="Pesquisar" id="searchGuardaRoupaD" onkeyup="searchGuardaRoupa('D')">       
+        </div>
+    
+        <div class="corContainerGuardaRoupa" data-augmented-ui="border bl-clip" id="corDireitoGuardaRoupa">
+            <div id="listagemCorGuardaRoupa" class="listaCorGuardaRoupaD">
+
+            </div>
+        </div>
+    
+        <div id="finalizarGuardaRoupa">
+            <div id="totalGuardaRoupa" data-augmented-ui="border bl-clip tr-clip">
+                <b>TOTAL:</b><span id="precoTotalGuardaRoupa">R$0</span>
+            </div>
+            <div class="botoesFinaisGuardaRoupa" data-augmented-ui="border bl-clip tr-clip" id="confimar" onClick="paymentGuardaRoupa()">
+                CONFIRMAR
+            </div>
+            <div class="botoesFinaisGuardaRoupa"  data-augmented-ui="border bl-clip tr-clip" id="cancelar" onClick="closeGuardaRoupaUI()">
+                CANCELAR
+            </div>
+        </div>
+    </div>
+    
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="nyo_guardaroupas/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+* {
+    outline: none;
+    list-style: none;
+    user-select: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+b {
+    color: #fff;
+}
+
+/*
+===============================
+    NOTIFY ITENS
+===============================
+*/
+
+notifyItem {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    display: flex;
+    transform: translate(-50%,0);
+    color: #fff;
+}
+
+notifyItem .notifyItem {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    overflow: hidden;
+    margin-right: 5px;
+    border: 2px dashed #4060aa88;
+}
+
+notifyItem .notifyItem::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    right: -20px;
+    width: 70px;
+    height: 40px;
+    transform: rotate(-500deg);
+    background-color: rgba(199, 199, 199, 0.100);
+}
+
+notifyItem .notifyItem .titleItem {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    justify-content: center;
+    font-size: 7px !important;
+    background-color: transparent !important;
+}
+
+notifyItem .notifyItem .titleItem {
+    background-color: #132651;
+    padding: 5px;
+}
+
+notifyItem .contentItem img {
+    position: relative;
+    top: -5px;
+    max-width: 70%;
+}
+
+
+
+/*
+===============================
+    NOTIFY GLOBAIS
+===============================
+*/
+
+.notifyItem:last-child
+{margin: 0;}
+.contentItem {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(199, 199, 199, 0.300);
+}
+.contentItem .titleItem {
+    width: 100%;
+    display: flex;
+    padding: 5px 0;
+    font-size: 12px;
+    padding-left: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #132651;
+}
+.contentItem .titleItem .infoItem {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    display: flex;
+    font-size: 8px;
+    margin-left: 10px;
+    font-weight: normal;
+    align-items: center;
+    border-radius: 100%;
+    justify-content: center;
+    background-color: slateblue;
+}
+.contentItem .textItem {
+    font-size: 12px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.centerItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centerItem img {
+    max-width: 60%;
+    filter: drop-shadow(0px 0px 2px #000000b4);
+}

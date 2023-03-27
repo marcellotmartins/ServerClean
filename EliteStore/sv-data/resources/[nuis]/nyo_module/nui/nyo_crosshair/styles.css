@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap%22%22");
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;    
+}
+
+* {
+    outline: none;
+    list-style: none;
+    font-weight: 100;
+    user-select: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+mainCrossHair {
+    position: relative;
+    width: 900px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+mainCrossHair .preview {
+    position: relative;
+    width: 50%;
+    height: 95%;
+    right: -220px;
+    margin: 0 auto;
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+mainCrossHair::after {
+    content: '';
+    z-index: -1;
+    width: 102%;
+    height: 100%;
+    right: -235px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+mainCrossHair .preview #crosshair_canvas {
+    width: 100%;
+    height: 100%;
+}
+
+mainCrossHair section {
+    position: relative;
+    width: 49%;
+    height: 95%;
+    right: -220px;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+mainCrossHair section header {
+    top: -4px;
+    display: flex;
+    color: #fff;
+    position: relative;
+    align-items: center;
+}
+
+mainCrossHair section header a {
+    font-size: 8px;
+    padding: 5px 10px;
+    margin-right: -3px;
+    letter-spacing: 1px;
+    transition: all .2s;
+    border-top-left-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.400);
+}
+
+mainCrossHair section header #active {
+    font-size: 11px;
+    color: #0075DE;
+    text-transform: uppercase;
+}
+
+mainCrossHair section header a:hover {
+    font-size: 12px;
+}
+
+mainCrossHair section header a:last-child {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+section .content .title {
+    width: none;
+    color: #fff;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+section .content .titleRange {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .content .titleRange label {
+    margin: 0 15px;
+}
+
+section .content .titleRange .lineTitle {
+    width: 100px;
+    height: 1px;    
+    background-color: rgba(73, 73, 73, 0.329);
+}
+
+mainCrossHair section .content {
+    width: 100%;
+    height: 95.3%;
+    color: #ffff;
+    overflow: auto;
+    font-size: 10px;
+    padding: 0px 10px;
+    letter-spacing: 3px;
+    overflow-x: hidden;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.400);
+}
+
+section .content .input-item {
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section .content .input-item .options {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    flex-direction: row;
+}
+
+section .content .input-item .options .item {
+    color: #fff;
+    display: flex;
+    padding: 7px 10px;
+    margin-right: 10px;
+    align-items: center;
+    transition: all .2s;
+    justify-content: center;
+    background-color: #0075DE;
+}
+
+section .content .input-item .options .activeOpt {
+    margin: 0;
+    border: 1px dashed #0075DE;
+    background-color: transparent;
+}
+
+section .content .input-item .options .item:hover {
+    border: 1px dashed #0075DE;
+    background-color: transparent;
+}
+
+section .content .input-item .sliderContent {
+    display: flex;
+    margin-top: 10px;
+    padding: 5px 0px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .300);
+}
+
+.sliderNumber {
+    border: 0;
+    width: 50px;
+    color: #fff;
+    border-radius: 0;
+    margin-left: 5px;
+    text-align: center;
+    background: linear-gradient(to top, rgba(65, 105, 225, 0.24), rgba(65, 105, 225, 0.459)) ;
+}
+
+section .content .input-item .preview {
+    width: 30px;
+    height: 20px;
+    margin: 0 5px;
+    display: flex;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+section .content .input-item .preview img {
+    max-width: 50%;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.400);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.400);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0075DE; 
+    box-shadow: 0 0 0.1rem transparent, inset 0 0 0.1rem transparent, 0 0 .7rem #0075DE, inset 0 0 .7rem #0075DE
+}
+
+.sliderCrossHair {
+    margin: auto;
+    outline: none;
+    padding: 0;
+    width: 100%;
+    height: 6px;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.089);
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4060AA), color-stop(100%, #4060AA));
+    background-image: -webkit-linear-gradient(#4060AA, #4060AA);
+    background-image: -moz-linear-gradient(#4060AA, #4060AA);
+    background-image: -o-linear-gradient(#4060AA, #4060AA);
+    background-image: linear-gradient(#4060AA, #4060AA);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.sliderCrossHair::-webkit-slider-runnable-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+}
+
+.sliderCrossHair::-moz-range-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+.sliderCrossHair::-moz-focus-outer {
+    border: 0;
+}
+
+.sliderCrossHair::-webkit-slider-thumb {
+    border: 0;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    -webkit-appearance: none;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+}
+
+.sliderCrossHair::-moz-range-thumb {
+    border: 0;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+}
+
+.categoryMargin {
+    margin: 25px 0px !important;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+  }

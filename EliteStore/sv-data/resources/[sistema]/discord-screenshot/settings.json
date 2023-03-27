@@ -1,0 +1,11 @@
+{
+    "webhookUrl": "https://discord.com/api/webhooks/976371656429809674/eGjIpQha8s-2sJEQV2K0kfHq_5HJS_m1VzYEQoTONMwdgVbWpAGQv-XudsiPNTJV6QvG",
+    "framework": "vrp",
+    "commandName": "screen",
+    "commandPermission": "mindmaster.permissao",
+    "hiddenIdentifiers": [],
+    "screenshotOptions": {
+        "encoding": "png",
+        "quality": 0.92
+    }
+}

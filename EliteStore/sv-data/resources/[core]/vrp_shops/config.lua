@@ -1,0 +1,211 @@
+shops = {}
+-------- SCRIPT AFETADO: VRP_SHOPS
+
+shops.coords = {
+	{ 25.68,-1346.6,29.5,"departamentStore" },
+	{ 1084.0,-2300.18,30.24,"gunStore" },
+	{ 2556.47,382.05,108.63,"departamentStore" },
+	{ 1163.55,-323.02,69.21,"departamentStore" },
+	{ -707.31,-913.75,19.22,"departamentStore" },
+	{ -47.72,-1757.23,29.43,"departamentStore" },
+	{ 373.89,326.86,103.57,"departamentStore" },
+	{ -3242.95,1001.28,12.84,"departamentStore" },
+	{ 1729.3,6415.48,35.04,"departamentStore" },
+	{ 548.0,2670.35,42.16,"departamentStore" },
+	{ 1960.69,3741.34,32.35,"departamentStore" },
+	{ 2677.92,3280.85,55.25,"departamentStore" },
+	{ 1698.5,4924.09,42.07,"departamentStore" },
+	{ -1820.82,793.21,138.12,"departamentStore" },
+	{ 1393.21,3605.26,34.99,"departamentStore" },
+	{ -2967.78,390.92,15.05,"departamentStore" },
+	{ -3040.14,585.44,7.91,"departamentStore" },
+	{ 1135.56,-982.24,46.42,"departamentStore" },
+	{ 1166.0,2709.45,38.16,"departamentStore" },
+	{ -1487.21,-378.99,40.17,"departamentStore" },
+	{ -620.9,-224.68,38.06,"minerStore" },
+	{ 448.98,-974.59,30.69,"policeStore" },
+	{ -2080.47,2610.33,3.09,"contrabandista" },
+	{ -1222.76,-907.21,12.33,"departamentStore" },
+	{ 1844.22, 2594.3, 45.9,"policeStore" },
+	{ 1692.62,3759.50,34.70,"ammunationStore" },
+	{ 252.89,-49.25,69.94,"ammunationStore" },
+	{ 843.28,-1034.02,28.19,"ammunationStore" },
+	{ -331.35,6083.45,31.45,"ammunationStore" },
+	{ -663.15,-934.92,21.82,"ammunationStore" },
+	{ -1305.18,-393.48,36.69,"ammunationStore" },
+	{ -1118.80,2698.22,18.55,"ammunationStore" },
+	{ 2568.83,293.89,108.73,"ammunationStore" },
+	{ -3172.68,1087.10,20.83,"ammunationStore" },
+	{ 21.32,-1106.44,29.79,"ammunationStore" },
+	{ 811.19,-2157.67,29.61,"ammunationStore" },
+	{ -1082.56,-247.78,37.77,"CoinsCar" },
+	{ -1080.44, -246.59, 37.77,"CoinsGroup" },
+	{ -1085.06, -247.88, 37.77,"CoinsItem" },
+}
+
+shops.list = {
+	["departamentStore"] = {
+		["mode"] = "Buy",
+		["type"] = "Cash",
+		["list"] = {
+			['agua'] = 100,
+			['leite'] = 100,
+			['cafe'] = 100,
+			['cafecleite'] = 100,
+			['cafeexpresso'] = 100,
+			['capuccino'] = 100,
+			['frappuccino'] = 100,
+			['cha'] = 100,
+			['icecha'] = 100,
+			['sprunk'] = 100,
+			['cola'] = 100,
+			['pibwassen'] = 100,
+			['tequilya'] = 100,
+			['patriot'] = 100,
+			['blarneys'] = 100,
+			['jakeys'] = 100,
+			['barracho'] = 100,
+			['ragga'] = 100,
+			['nogo'] = 100,
+			['mount'] = 100,
+			['cherenkov'] = 100,
+			['bourgeoix'] = 100,
+			['bleuterd'] = 100,
+			['sanduiche'] = 100,
+			['rosquinha'] = 100,
+			['hotdog'] = 100,
+			['xburguer'] = 100,
+			['chips'] = 100,
+			['batataf'] = 100,
+			['pizza'] = 100,
+			['frango'] = 100,
+			['bcereal'] = 100,
+			['bchocolate'] = 100,
+			['taco'] = 100,
+			["acido"] = 15,
+			["ziplock"] = 15,
+			["folhadeselo"] = 15,
+			["seda"] = 15,
+			["celular"] = 20,
+			["radio"] = 30,
+			["ponta-britadeira"] = 15,
+			["garrafa-vazia"] = 5,
+			["mochila"] = 10000,
+			["roupas"] = 30000,
+			["energetico"] = 1000,
+			["repairkit"] = 3000,
+			["caixa-vazia"] = 5,
+		}
+	},
+	["policeStore"] = {
+		["mode"] = "Buy",
+		["type"] = "Cash",
+		["perm"] = "policia.permissao",
+		["list"] = {
+			["WEAPON_COMBATPISTOL"] = 0,
+			["WEAPON_STUNGUN"] = 0,
+			["WEAPON_NIGHTSTICK"] = 0,
+			["WEAPON_FLASHLIGHT"] = 0,
+			["WEAPON_SMG"] = 0,
+			["WEAPON_COMBATPDW"] = 0,
+			["WEAPON_CARBINERIFLE"] = 0,
+			["WEAPON_SPECIALCARBINE"] = 0,
+			["WEAPON_SMG_AMMO"] = 0,
+			["WEAPON_PISTOL_AMMO"] = 0,
+			["WEAPON_RIFLE_AMMO"] = 0,
+			["colete"] = 0,
+		}
+	},
+	["ammunationStore"] = {
+		["mode"] = "Buy",
+		["type"] = "Cash",
+		["list"] = {
+			["colete"] = 5000,
+			["WEAPON_DAGGER"] = 1950,
+			["WEAPON_BAT"] = 1950,
+			["WEAPON_BOTTLE"] = 1950,
+			["WEAPON_CROWBAR"] = 1950,
+			["WEAPON_GOLFCLUB"] = 1950,
+			["WEAPON_HAMMER"] = 1950,
+			["WEAPON_HATCHET"] = 1950,
+			["WEAPON_KNUCKLE"] = 1950,
+			["WEAPON_KNIFE"] = 1950,
+			["WEAPON_MACHETE"] = 1950,
+			["WEAPON_SWITCHBLADE"] = 1950,
+			["WEAPON_WHENCH"] = 1950,
+			["WEAPON_BATTLEAXE"] = 1950,
+			["WEAPON_POOLCUE"] = 1950,
+			["WEAPON_STONE_HATCHET"] = 1950,
+		}
+	},
+	["gunStore"] = {
+		["mode"] = "Buy",
+		["type"] = "Cash",
+		["list"] = {
+			["colete"] = 5000,
+			["WEAPON_PISTOL_MK2"] = 200000,
+			["WEAPON_SNSPISTOL"] = 160000,
+			["WEAPON_PISTOL_AMMO"] = 350,
+		}
+	},
+	["minerStore"] = {
+		["mode"] = "Sell",
+		["type"] = "Cash",
+		["list"] = {
+			["diamante"] = 3000,
+			["barra-ouro"] = 2500,
+			["barra-prata"] = 2200,
+			["barra-ferro"] = 1000,
+		}
+	},
+	["contrabandista"] = {
+		["mode"] = "Buy",
+		["type"] = "Cash",
+		["list"] = {
+			["alvejante"] = 2000,
+			["corpo-doze"] = 84000,
+			["corpo-sub"] = 84000,
+			["corpo-pistola"] = 50000,
+			["corpo-fuzil"] = 105000,
+			["capsulas"] = 1000,
+			["placa-aluminio"] = 10000,
+			["broca"] = 5000,
+			["disco-serra"] = 500,
+			["algema"] = 500,
+		}
+	},
+	["policeStore"] = {
+		["mode"] = "Buy",
+		["type"] = "Cash",
+		["perm"] = "policia.permissao",
+		["list"] = {
+			["WEAPON_SWITCHBLADE"] = 200,
+			["radio"] = 200
+		}
+	},
+	["CoinsCar"] = {
+		["mode"] = "Buy",
+		["type"] = "CoinsCar",
+		["list"] = {
+			["panto"] = 10,
+		}
+	},
+	["CoinsGroup"] = {
+		["mode"] = "Buy",
+		["type"] = "CoinsGroup",
+		["list"] = {
+			["ultimate"] = 50,
+			["diamante"] = 40,
+			["platina"] = 30,
+			["ouro"] = 15,
+		}
+	},
+	["CoinsItem"] = {
+		["mode"] = "Buy",
+		["type"] = "CoinsItem",
+		["list"] = {
+			["agua"] = 50
+		}
+	},
+
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="nyo_crosshair/styles.css">
+    </head>
+
+    <body>
+       <mainCrossHair id="actionCrossHair" style="display:none;">
+            <div class="preview" id="actionCrossHairMira" style="display: none;">
+                <div id="crosshair_canvas"></div>
+            </div>
+            <section id="actionCrossHairEdit" style="display:none;">
+                <header>
+                    <nav>
+                        <a id="active">Crosshair</a>
+                        <a>Binds</a>
+                    </nav>
+                </header>
+
+                <div class="content">
+                    <div class="input-item">
+                        <div class="title">Style</div>
+                        <div class="options">
+                            <div class="item">Default</div>
+                            <div class="item">Classic</div>
+                            <div class="item activeOpt">Dynamic</div>
+                        </div>
+                    </div>
+                    <div class="input-item categoryMargin">
+                        <div class="titleRange">
+                            <div class="lineTitle"></div>
+                            <label>Alpha Option</label>
+                            <div class="lineTitle"></div>
+                        </div>
+                        <div class="sliderContent">
+                            <div class="preview"><img src="https://cdn.dathost.net/img/crosshair_alpha_0.png"></div>
+                            <input class="sliderCrossHair" type="range" value="20" />
+                            <input class="sliderNumber" value="20" type="number">
+                            <div class="preview"><img src="https://cdn.dathost.net/img/crosshair_alpha_1.png"></div>
+                        </div>
+                    </div>
+                    <div class="input-item categoryMargin">
+                        <div class="titleRange">
+                            <div class="lineTitle"></div>
+                            <label>Alpha Option</label>
+                            <div class="lineTitle"></div>
+                        </div>
+                        <div class="sliderContent">
+                            <div class="preview"><img src="https://cdn.dathost.net/img/crosshair_alpha_0.png"></div>
+                            <input class="sliderCrossHair" type="range" value="20" />
+                            <input class="sliderNumber" value="20" type="number">
+                            <div class="preview"><img src="https://cdn.dathost.net/img/crosshair_alpha_1.png"></div>
+                        </div>
+                    </div>
+                    <div class="input-item categoryMargin">
+                        <div class="titleRange">
+                            <div class="lineTitle"></div>
+                            <label>Alpha Option</label>
+                            <div class="lineTitle"></div>
+                        </div>
+                        <div class="sliderContent">
+                            <div class="preview"><img src="https://cdn.dathost.net/img/crosshair_alpha_0.png"></div>
+                            <input class="sliderCrossHair" type="range" value="20" />
+                            <input class="sliderNumber" value="20" type="number">
+                            <div class="preview"><img src="https://cdn.dathost.net/img/crosshair_alpha_1.png"></div>
+                        </div>
+                    </div>
+                    <div class="input-item categoryMargin">
+                        <div class="titleRange">
+                            <div class="lineTitle"></div>
+                            <label>Alpha Option</label>
+                            <div class="lineTitle"></div>
+                        </div>
+                        <div class="sliderContent">
+                            <div class="preview"><img src="https://cdn.dathost.net/img/crosshair_alpha_0.png"></div>
+                            <input class="sliderCrossHair" type="range" value="20" />
+                            <input class="sliderNumber" value="20" type="number">
+                            <div class="preview"><img src="https://cdn.dathost.net/img/crosshair_alpha_1.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+       </main>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="nyo_crosshair/font.js"></script>
+    <script type="text/javascript" src="nyo_crosshair/kinetic.js"></script>
+    <script type="text/javascript" src="nyo_crosshair/script.js"></script>
+    <script>
+        $('input[type=range]').on('input', function(e){
+        var min = e.target.min,
+            max = e.target.max,
+            val = e.target.value;
+        
+        $(e.target).css({
+            'backgroundSize': (val - min) * 100 / (max - min) + '% 100%'
+        });
+        }).trigger('input');
+    </script>
+</html>

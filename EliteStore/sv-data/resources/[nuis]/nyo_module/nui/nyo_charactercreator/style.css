@@ -1,0 +1,624 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+}
+
+
+body{
+    background: url(https://media.discordapp.net/attachments/712813090952970345/825172770983903232/unknown.png?width=994&height=559);
+    background-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#cameraSkinShop{
+    width: 300px;
+    height:60px;
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.divCameraSkinShop{
+    width: 50px;
+    height:50px;
+    background-image: linear-gradient(90deg, );
+    margin-right: 5px;
+    margin-top: 5px;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+    float: left;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    --aug-border-all: 2px;
+    --aug-border-bg: linear-gradient(54.76deg, #E9C135 5.23%, #E9354F 5.24%, rgba(233, 53, 79, 0) 127.36%);
+    justify-content:center;
+    font-size: 20px;
+}
+
+
+
+#rotacaoSkinShop{
+    width: 300px;
+    height:60px;
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    margin: auto;
+}
+
+#rotacaoSkinShop h1{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+#slideSkinShop{
+    width: 265px;
+    height: 25px;
+    float: left;
+    display: flex;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    --aug-border-all: 2px;
+    --aug-border-bg: linear-gradient(-93.57deg, #E9354F 2.99%, rgba(0, 0, 0, 0) 97.15%);
+  
+    
+    
+}
+
+.slideCriacaoSkinShop {
+    -webkit-appearance: none;
+    width: 200px;
+    float: left;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slideCriacaoSkinShop:hover {
+   opacity: 1;
+ }
+  
+.slideCriacaoSkinShop::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   appearance: none;
+   width: 10px;
+   height: 10px;
+   background: #E9354F;
+   border-radius: 10px;
+   cursor: pointer;
+ }
+  
+.slideCriacaoSkinShop::-moz-range-thumb {
+   width: 25px;
+   height: 25px;
+   background: #ffffff;
+   cursor: pointer;
+}
+
+
+.menuContainerSkinShop{
+    width: 375px;
+    height:550px;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    --aug-border-bg:linear-gradient(24.73deg, #FF0000 47.24%, rgba(208, 99, 99, 0) 100%);
+    --aug-border-all: 2px;
+}
+
+.menuContainerSkinShop h2{
+    width:100%;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+#esquerdoSkinShop{
+    left: 10px;
+}
+
+#direitoSkinShop{
+    right: 10px;
+}
+
+.menuInternSkinShop{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.botaoMenuSkinShop{
+    width: 25px;
+    height: 25px;
+    float: left;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 7px;
+    font-size: 19px;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.botaoMenuSkinShop:nth-child(2){
+    margin-left: 0 !important;
+}
+.menuInternSkinShopAfter{
+    display: block;
+    position: absolute;
+    top: 65px;
+    width: 95%;
+    height: 1px;
+    z-index: 99999999999;
+    background-image: linear-gradient(to left, #ff000000, #ff0000, #ff000000 );
+}
+
+.botaoMenuSkinShop:hover{
+    filter: brightness(0.8);
+}
+
+.listagemSkinShop{
+    width:100%;
+    height: 480px;
+    margin-top: 5px;
+    overflow: auto;
+}
+
+.itemSkinShop{
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+    --aug-border-bg:linear-gradient(24.73deg, #FF0000 47.24%, rgba(208, 99, 99, 0) 100%);
+    --aug-border-all: 2px;
+
+    transition: .3s ease;
+}
+
+.fundoItemSkinShop{
+    width: 165px; 
+    height: 165px;
+    float: left;
+    margin: 10px;
+    margin-top: 20px;
+    color: #fff;
+}
+.valorSkinShop{
+    width: 80px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    position: relative;
+    top: calc(-10px - 100%);
+    left: 1px;
+    font-size: 12px;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgb(35, 35, 35) 90.41%);
+    border: 1px solid red;
+    z-index: 99999999;
+    --aug-border-all: 1px;
+    --aug-border-bg: linear-gradient(24.73deg, #FF0000 47.24%, rgba(208, 99, 99, 0) 100%);
+    --aug-bl: 5px;
+}
+
+.idSkinShop{
+    width: 35px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgb(35, 35, 35) 90.41%);
+    z-index: 99999999;
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+    left: calc(55% - 30px);
+    --aug-bl: 5px;
+    --aug-tr: 5px;
+    --aug-tl: 5px;
+    --aug-br: 5px;
+    --aug-border-all: 1px;
+    --aug-border-bg: linear-gradient(24.73deg, #FF0000 47.24%, rgba(208, 99, 99, 0) 100%);
+}
+.corContainerSkinShop{
+    width: 95px;
+    height: 550px;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+
+    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#corEsquerdoSkinShop{
+    left: 390px;
+    
+    --aug-border-bg: linear-gradient(40.99deg, #FF0000 55.07%, rgba(255, 255, 255, 0) 102.46%);
+    
+    
+    --aug-border-all: 2px;
+}
+
+
+#corDireitoSkinShop{
+    right: 390px;
+    --aug-border-bg: linear-gradient(40.99deg, #FF0000 55.07%, rgba(255, 255, 255, 0) 102.46%);
+    --aug-border-all: 2px;  
+}
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.corPSSkinShop{
+    color: #fff;
+    width: 45%;
+    float: left;
+    height: 90%;
+    margin: 2px;
+    text-align: center;
+    position: relative;
+    bottom:5px;
+}
+
+.corPSSkinShop b{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    float: left;
+}
+
+.listaCorSkinShop{
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+}
+
+.coresSkinShop{
+    width: 13px;
+    height: 13px;
+    float: left;
+    margin: 1px;
+    position: relative;
+    left: 7px;
+    border-radius: 2px;
+    background: red;
+}
+
+
+#finalizarSkinShop{
+    width: 300px;
+    height:60px;
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoesFinaisSkinShop{
+    width: 200px;
+    height: 40px;
+    float: left;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+    justify-content: center;
+    margin: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 800;
+    --aug-border-all: 2px;
+    --aug-border-bg: linear-gradient(24.73deg, #FF0000 47.24%, rgba(208, 99, 99, 0) 100%);   
+    cursor: pointer;
+    transition: .3s ease;
+}
+.botoesFinaisSkinShop:hover{
+    filter: brightness(0.9);
+
+}
+
+
+@media (max-width:1281px){
+    body{
+        zoom: 0.9;
+    }
+    .menuInternSkinShop::after{
+        height: 2px;
+    }
+
+}
+
+.inputDivSkinShop{
+    width: 200px;
+    height: 30px;
+    float: left;
+    --aug-border-all: 2px;
+    --aug-border-bg: linear-gradient(24.73deg, #FF0000 47.24%, rgba(208, 99, 99, 0) 100%);   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.inputPesquisaSkinShop{ 
+    width: 98%;
+    height: 97%;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+    color: #fff;
+    border: 0;
+    text-align: center;
+}
+
+#pesquisaDireitaSkinShop{
+    float: right;
+    position: absolute;
+    top: 590px;
+    bottom: 0;
+    margin: auto;
+    right: 100px;
+}
+
+#pesquisaEsquerdaSkinShop{
+    float: left;
+    position: absolute;
+    top: 590px;
+    bottom: 0;
+    margin: auto;
+    left: 100px;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+
+.corItemSkinShop{
+    zoom: 0.5;
+    position: relative;
+    left: 3px
+}
+
+.itemSkinShop:hover{
+    filter: brightness(0.8);
+}
+
+.id_corSkinShop{
+    zoom: 1.52 !important;
+    left: 40px;
+}
+
+#listagemCorSkinShop{
+    width: 100%;
+    height: 97%;
+    overflow: auto;
+}
+
+#opacidadeSkinShop{
+    position: relative;
+    top: 20px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+
+#opacidadeSkinShop b{
+    font-size: 12px;
+    position: relative;
+    bottom: 5px;
+}
+
+.opacidadeSlideSkinShop{
+    width: 70% !important;
+}
+.ladoDireitoSlideSkinShop{
+    position: relative;
+    left: 18px;
+}
+
+.ladoEsquerdoSlideSkinShop{
+    position: relative;
+    left: 10px;
+}
+
+.comTresSkinShop{
+    zoom: 0.7;
+    margin-right: 0px;
+    position: relative;
+    left: 0px;
+}
+
+
+.selecionadoSkinShop{
+    color: #35E97D;
+}
+
+
+/* .tooltip{
+    width: 100px;
+    height: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999999999;
+
+    visibility: hidden;
+
+}
+
+.botaoMenu:hover .tooltip{
+    visibility: visible;
+} */
+
+
+
+.modal{
+    width: 78%;
+    height: 105px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.modalMenor{
+    height: 65px;
+}
+
+.modal:first-child{
+    margin-top: 10px;
+}
+
+.titleModal{
+    width: 100%;
+    height: 20px;
+    display:flex;
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+
+.inputModal{
+    height: 30px;
+    width: 100%;
+    margin-top: 5px;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+    border: 1px solid #E9354F;
+    text-align: center;
+    color: #fff;
+}
+
+.coresModal{
+    height: 75px;
+    width: 100%;
+    margin-top: 5px;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+    border: 1px solid #E9354F;
+}
+
+.corModal{
+    width: 15px;
+    height: 15px;
+    margin: 1px;
+    border-radius: 2px;
+    float: left;
+    background: red;
+    position: relative;
+    left: 2px;
+    top: 3px;
+}
+
+
+.slideCriacao{
+    height: 30px;
+    width: 100% !important;
+    margin-top: 5px;
+    margin-left: 0 !important;
+    border: 1px solid #E9354F;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+
+}
+
+.slideCriacao input{
+    width: 90% !important;
+
+}
+
+.slideCriacaoMenor{
+    height: 30px;
+    width: 70% !important;
+    margin-top: 5px;
+    margin-left: 0 !important;
+    border: 1px solid #E9354F;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+    float: left;
+}
+
+.menorInput{
+    float: left;
+    width: 25%;
+    margin-left: 5.5px;
+    height: 25px;
+    margin-top: 5px;
+    border: 0;
+    border: 1px solid #E9354F;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+}
+
+.metade{
+    width: 47%;
+    float: left;
+}
+
+.metade:last-child{
+    margin-left: 5%; 
+}
+
+
+.sexos{
+    width:100%;
+    height:40px;
+    border: 1px solid #E9354F;
+    background: linear-gradient(94.41deg, #1A1A1A 13.81%, rgba(35, 35, 35, 0.71) 90.41%);
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.sexos div{
+    width: 20%;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    margin-left: 2px;
+    border-radius: 5px;
+    background: #00000080;
+}
+
+
+.sexos div:hover{
+    filter: brightness(0.9);
+}

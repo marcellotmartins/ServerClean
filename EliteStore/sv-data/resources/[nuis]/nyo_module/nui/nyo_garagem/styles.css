@@ -1,0 +1,512 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.allnuiGaragem {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  transform: translate(0, -50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+garage {
+  position: relative;
+  height: 250px;
+  display: flex;
+  margin: 0 80px;
+  flex-direction: column;
+}
+
+garage .title {
+  position: absolute;
+  top: -60px;
+  left: 80px;
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+garage .title small {
+  opacity: .5;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+garage menu {
+  height: 100%;
+  display: flex;
+}
+
+garage menu aside {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  padding-right: 50px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 2px dashed rgba(255, 255, 255, 0.397);
+}
+
+garage menu aside .item {
+    min-height: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: all .3s;
+  border-radius: 10px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.311);
+}
+
+garage menu aside .active {
+  background-color: #0075DE;
+}
+
+garage menu aside .item:hover {
+  color: #000;
+  background-color: #0075DE;
+}
+
+garage menu aside .item img {
+  max-width: 50%;
+}
+
+garage menu section {
+  position: relative;
+  height: 250px;
+  overflow: auto;
+  padding-left: 20px;
+}
+
+garage menu section .item {
+  position: relative;
+  opacity: .5;
+  width: 300px;
+  height: 80px;
+  display: flex;
+  border-radius: 5px;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  transition: all .3s;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.311);
+}
+
+garage menu section .active {
+  opacity: 1;
+  background-color: #0075DE;
+}
+
+garage menu section .active::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(86.63deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 117, 222, 0) 129.98%);
+}
+
+garage menu section .item:hover {
+  opacity: 1;
+  background-color: #0075DE;
+}
+
+garage menu section .item img {
+  position: relative;
+  top: 5px;
+  left: -5px;
+  z-index: 101;
+  max-width: 35%;
+  transform: scaleX(-1);
+}
+
+garage menu section .item .item-info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ffff;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: right;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+garage menu section .item .item-info small {
+  opacity: .5;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+garage menu section .item:last-child {
+  margin: 0;
+}
+
+/*------------------------------------------*/
+.mainGaragem {
+  width: 900px;
+  height: 550px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.mainGaragem header {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 50px;
+  background: #0075DE;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.mainGaragem header h1 {
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.mainGaragem header small,
+section small {
+  opacity: .5;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+header #img-car,
+#img-stars {
+  position: absolute;
+  top: 35px;
+  right: 100px;
+  max-width: 35%;
+}
+
+header #img-car {
+    top: 150px;
+    transform: translate(0%, -50%);
+}
+
+#img-stars {
+  top: 0;
+  right: 70px;
+  max-width: 40%;
+}
+
+.mainGaragem section {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  padding: 30px 50px 0 50px;
+  flex-direction: column;
+}
+
+.mainGaragem section h1 {
+  font-size: 35px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.mainGaragem section .infos-content, .mainGaragem section .infos-content2 {
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+}
+
+.mainGaragem section .column:nth-child(1) {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: repeat(3, 60px);
+  grid-template-columns: repeat(2, 250px);
+}
+
+.mainGaragem section .column .row {
+  position: relative;
+  width: 220px;
+  height: 100px;
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.mainGaragem section .column .row .bar {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  margin-top: 5px;
+  margin-left: -5px;
+  align-items: center;
+}
+
+.mainGaragem section .column .row small {
+  position: absolute;
+  right: 0;
+}
+
+.mainGaragem section .column .row .bar .shape {
+  width: 25px;
+  height: 100%;
+  margin-right: -5px;
+  background: rgba(0, 0, 0, 0.34);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.mainGaragem section .column .row .bar .active {
+  background: #00AFE7;;
+}
+
+.mainGaragem section .column .info-column {
+  width: 250px;
+  height: 50px;
+  display: flex;
+  padding: 0 15px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  border-radius: 5px 0px 0px 5px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.mainGaragem section .column .info-column small {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.mainGaragem section .column .info-column span {
+  color: #0075DE;
+  font-size: 13px;
+  margin-top: 1px;
+  letter-spacing: 1px;
+}
+
+.mainGaragem section .column .info-column:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  position: relative;
+  top: -5px;
+  display: flex;
+  padding: 0 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .steps {
+  width: 150px;
+  color: #fff;
+  display: flex;
+  font-size: 10px;
+  letter-spacing: 2px;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.step-content {
+  display: flex;
+  width: 300px;
+}
+
+footer .steps .step {
+  width: 60px;
+  height: 15px;
+  margin-top: 7px;
+  margin-right: 5px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+footer .steps .active {
+  background-color: #0075DE;
+}
+
+footer button {
+  border: 0;
+  width: 130px;
+  height: 40px;
+  outline: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: #FF2D2D;
+  text-transform: uppercase;
+}
+
+footer button:last-child {
+  background: #0075DE;
+}
+
+.friend-panel {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 2px solid #0076de33;
+}
+
+.friend-panel .add-friend {
+  position: absolute;
+  border: 0;
+  right: 20px;
+  outline: none;
+  bottom: 10px;
+  color: #fff;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.friend-panel table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.friend-panel table td {
+  padding: 15px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.friend-panel table th {
+  border: 0;
+  color: white;
+  font-size: 12px;
+  text-align: left;
+  padding-top: 12px;
+  padding-left: 15px;
+  letter-spacing: 2px;
+  padding-bottom: 12px;
+  text-transform: uppercase;
+  background-color: #0075DE;
+}
+
+.friend-panel table th:first-child {
+  border-radius: 5px 0px 0px 0px;
+}
+
+.friend-panel table th:last-child {
+  border-radius: 0px 5px 0px 0px;
+}
+
+.friend-panel modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  display: flex;
+  font-size: 12px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.friend-panel modal span {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.friend-panel modal small {
+  font-weight: 400;
+  font-size: 9px;
+}
+
+.friend-panel modal input {
+  border: 0;
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.friend-panel modal div {
+  display: flex;
+  width: 100%;
+}
+
+.friend-panel modal button {
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  color: #fff;
+  outline: none;
+  font-size: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.friend-panel modal button:last-child {
+  background-color: #0075DE;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@media only screen and (max-width: 1366px) {
+  garage {
+    zoom: .8;
+  }
+
+  .mainGaragem {
+    zoom: .7;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  garage {
+    zoom: .7;
+  }
+
+  .mainGaragem {
+    zoom: .6;
+  }
+}

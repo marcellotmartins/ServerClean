@@ -1,0 +1,23 @@
+/* *{
+    margin: 0; 
+    padding: 0; 
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+}
+
+
+.backgroundGeralColor{
+    background-color: rgb(255, 217, 0);
+}
+
+#menuSkinShop::after, #menuBarberShop::after, #menuTattooShop::after{
+    content: '';
+    display: block;
+    float: left;
+    margin-top: 6px;
+    background: linear-gradient(to left, #B6223000, rgb(255, 217, 0), #B6223000);
+    width: 95%;
+    height: 1.5px;
+} */

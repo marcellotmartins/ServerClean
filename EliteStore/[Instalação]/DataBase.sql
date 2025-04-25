@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `elite`
-USE `elite`;
+USE elite;
+
 
 CREATE TABLE IF NOT EXISTS `btc_exp` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -748,9 +748,9 @@ CREATE TABLE IF NOT EXISTS `elite_homes_permissions` (
 CREATE TABLE IF NOT EXISTS `elite_identity` (
   `user_id` int(11) NOT NULL,
   `self` varchar(256) DEFAULT NULL,
-  PRIMARY KEY (`user_id`),
-  CONSTRAINT `fk_inv_identity` FOREIGN KEY (`user_id`) REFERENCES `vrp_users` (`id`) ON DELETE CASCADE
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 CREATE TABLE IF NOT EXISTS `elite_mdt` (
   `index` int(11) NOT NULL AUTO_INCREMENT,
